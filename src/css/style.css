@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #37ff00; /* your new primary color */
+  }
+
+  #blue
+  {
+    background-color: blue;
+  }
+  #red
+  {
+    background-color: red;
+  }
+  #black
+  {
+    background-color: black;
+  }
+  #yellow
+  {
+    background-color: yellow;
+  }
+  #row-g
+  {
+    background: linear-gradient(to bottom, #ffffff, rgb(210, 202, 205));
+  }
+  .carousel-caption h5 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+  .carousel-caption p {
+    font-size: 18px;
+    color: black;
+  }
+  .carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    backdrop-filter: blur(3px);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    padding: 20px;
+  }
+  .genre
+  {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+  }
+  #subtitle
+  {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #e9e9e9;
+  }
+
+  #overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 9; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  .overlay-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+  }
+  
+  .overlay-container .container {
+    height: 100%;
+  }
+  
+  #link
+  {
+    
+  }

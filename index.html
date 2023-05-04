@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- JS -->
+    <script src="src/js/script.js"></script>
+
+</head>
+<body>
+    
+      <!-- https://picsum.photos/60 -->
+<!-- top nav -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- web logo -->
+      <a class="navbar-brand" href="#">
+        <img src="https://picsum.photos/60" alt="web logo" width="50" height="50" class="d-inline-block align-text-top">
+      </a>
+  
+      <!-- genre dropdown -->
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genre
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Comedy</a></li>
+            <li><a class="dropdown-item" href="#">Drama</a></li>
+          </ul>
+        </li>
+      </ul>
+  
+      <!-- search form -->
+      <form class="d-flex mx-auto">
+        <button class="btn btn-outline-secondary me-2" type="submit">Search</button>
+        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+        </form>
+  
+      <!-- profile dropdown -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://picsum.photos/60" alt="profile image" width="30" height="30" class="rounded-circle">
+            <span class="mx-2">Profile Name</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container mt-3">
+    <div class="row mx-auto mb-5 justify-content-center">
+      <div class="col-md-8 my-5">
+        <div class="row">
+          <div class="col-sm-10 offset-sm-1 col-md-12 offset-md-0">
+
+            <div class="carousel slide" data-bs-ride="carousel" data-bs-slide="false" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/200/100" class="d-block rounded w-100" alt="..." id="shadow">
+                        <div class="carousel-caption w-100 d-none d-md-block carousel-caption-bottom" id="">
+                            <h5>Title 1</h5>
+                            <p>Description 1</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/200/100" class="d-block rounded w-100" alt="..." id="shadow">
+                        <div class="carousel-caption w-100 d-none d-md-block carousel-caption-bottom" id="">
+                            <h5>Title 2</h5>
+                            <p>Description 2</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/200/100" class="d-block rounded w-100" alt="..." id="shadow">
+                        <div class="carousel-caption w-100 d-none d-md-block carousel-caption-bottom" id="">
+                            <h5>Title 3</h5>
+                            <p>Description 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+
+            <div class="row py-5">
+                <p class="fw-normal fs-4">Welcome Back User!</p>
+                <hr>
+            </div>
+
+            <div class="row py-5" id="">
+                <p class="fw-bold fs-4 ">Top Picks for You</p>
+                <!-- <hr class="mb-4"> -->
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                        <!-- 4 items in first page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid w-100 rounded pb-2" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid w-100 rounded pb-2" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="img-fluid rounded pb-2 w-100" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="img-fluid rounded pb-2 w-100" alt="" style="max-height: 15rem;">
+
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <!-- 2 items in first page on sm -->
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid rounded w-100 pb-2" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid rounded w-100 pb-2" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>                      
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                        <!-- 4 items in second page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="src/image/ayam1.jpg" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <!-- 2 items in first page on sm -->
+                        <div class="col-sm-6 d-md-none">
+                            <img src="src/image/ayam1.jpg" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-sm-6 d-md-none">
+                            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- carousel buttons -->
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row py-5" >
+                <p class="fw-bold fs-4" id="subtitle">Completed Stories</p>
+                <p class=" fs-6 text-secondary" style="text-transform: capitalize;">Statisfy your desire from start to finish</p>
+
+                <div class="row rounded shadow m-1 p-4" id="">
+                    <div class="col-3" id="">
+                        <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg"  class="img-fluid w-100 pb-2" alt="Open Modal" data-bs-toggle="modal" data-bs-target="#exampleModal" style="max-height: 15rem;">
+                    </div>
+                    <div class="col-9 my-3" id="">
+                        <p class="fw-bold fs-4 " id="subtitle">Novel Title</p>
+                        <p class="fs-6 text-secondary" style="-webkit-line-clamp: 6; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;">Novel Synopsis - 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto in iure ratione odio quaerat repellendus, molestiae atque ipsum, placeat minima qui facere, quos hic fuga cumque nemo dolores quis maiores eveniet laborum. Sapiente impedit tempore laudantium voluptates totam nemo doloremque corporis non hic et nihil iusto quo maiores, ipsa doloribus libero eius animi quidem vero aperiam, quis fugiat provident aliquid. Laboriosam, odio doloremque eos accusamus a possimus beatae deleniti est vel autem sunt illo expedita odit impedit iusto enim explicabo. Tempore blanditiis molestias esse voluptatem, libero quae corrupti porro aspernatur magnam exercitationem quaerat consequuntur quam aliquid deserunt repudiandae tempora fuga.
+
+                        </p>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                    </div>
+                </div>
+
+                <div id="carouselExampleSecond" class="carousel slide mt-4">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                        <!-- 4 items in first page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid w-100 rounded pb-2" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid w-100 rounded pb-2" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="img-fluid rounded pb-2 w-100" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="img-fluid rounded pb-2 w-100" alt="" style="max-height: 15rem;">
+
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <!-- 2 items in first page on sm -->
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid rounded w-100 pb-2" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid rounded w-100 pb-2" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>                      
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                        <!-- 4 items in second page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="src/image/ayam1.jpg" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <!-- 2 items in first page on sm -->
+                        <div class="col-sm-6 d-md-none">
+                            <img src="src/image/ayam1.jpg" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-sm-6 d-md-none">
+                            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- carousel buttons -->
+                    <a class="carousel-control-prev" href="#carouselExampleSecond" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleSecond" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  
+<!-- <div id="overlay" onclick="off()">
+    <div class="container position-absolute top-50 start-50 translate-middle shadow overlay-container">
+      <div class="row ">
+        <div class="col-md-5 h-100 d-flex align-items-center">
+          <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid rounded" style="max-height: 15rem; object-fit: cover; max-width: 100%;" alt="" onclick="on()">
+        </div>
+        <div class="col-md-7">
+          <p>Content here in col-md-7</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+        <div class="row">
+            <div class="col-5">
+                <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="w-100 img-fluid" alt="">
+            </div>
+            <div class="col-7">
+                <p class="fw-bold fs-4 mb-2" id="subtitle">Novel Title</p>
+                <span class="fs-6 px-2 py-1 bg-secondary rounded-pill fw-semibold text-white "> Completed</span>
+                <a href="novel.html"><button type="button" class="btn btn-dark rounded-pill my-2 w-100">Start Reading</button></a>
+                        <p class="fs-6 text-secondary mt-3" style="-webkit-line-clamp: 7; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;">Novel Synopsis - 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto in iure ratione odio quaerat repellendus, molestiae atque ipsum, placeat minima qui facere, quos hic fuga cumque nemo dolores quis maiores eveniet laborum. Sapiente impedit tempore laudantium voluptates totam nemo doloremque corporis non hic et nihil iusto quo maiores, ipsa doloribus libero eius animi quidem vero aperiam, quis fugiat provident aliquid. Laboriosam, odio doloremque eos accusamus a possimus beatae deleniti est vel autem sunt illo expedita odit impedit iusto enim explicabo. Tempore blanditiis molestias esse voluptatem, libero quae corrupti porro aspernatur magnam exercitationem quaerat consequuntur quam aliquid deserunt repudiandae tempora fuga.
+
+                        </p>
+                <p class=""></p><a class="link-opacity-100 fw-semibold text-dark d-flex justify-content-end w-100 link-underline link-underline-opacity-0" href="detail.html">More Detail ></a></p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!-- Image -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+</body>
+</html>
