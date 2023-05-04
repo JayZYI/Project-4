@@ -1,96 +1,52 @@
-<div class="container mt-3">
-    <div class="row mx-auto mb-5 justify-content-center">
-      <div class="col-md-8 my-5">
-        <div class="row">
-          <div class="col-sm-10 offset-sm-1 col-md-12 offset-md-0">
+ 
+ 
+            <div class="row" >
+                <div class="col-md-12">
+                        <div class="row mb-2">
+                        <div class="col-md-1">        
+                            <img src="https://picsum.photos/60" alt="web logo" width="50" height="50" class="d-inline-block align-text-top">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <p class="fw-semibold">nama user</p>
+                                <p>comment user - 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia odio at laborum iure fuga, eum, dolorem cum voluptas accusamus magnam sunt pariatur qui numquam minus? Ratione natus inventore facilis.
 
-            <div class="row" id="black">
-                <p class="fw-bold fs-4">Top Picks for You</p>
-                <div class="col-sm-6 col-md-3 offset-sm-0 offset-md-0" id="yellow">col1</div>
-                <div class="col-sm-6 col-md-3 offset-sm-2 offset-md-0" id="red">col2</div>
-                <div class="col-sm-6 col-md-3 offset-sm-0 offset-md-0">col3</div>
-                <div class="col-sm-6 col-md-3 offset-sm-2 offset-md-2">col4</div>
+                                </p>
+                                <small><a href="" class="text-decoration-none text-secondary">8h ago</a> &#x2022; <a href="" class="fw-semibold text-decoration-none text-primary">Reply</a> </small>
+                            </div>
+                        </div>
+                        <div class="col-md-1 px-sm-2" style="padding: 0px;">
+                                <i class="fa-solid fa-ellipsis-vertical text-secondary fs-5 text-center mx-1"></i>
+                                <i class="fa-regular fa-heart text-secondary fs-5 text-center mx-1"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <!-- 4 items in first page on md -->
-          <div class="col-md-3 d-none d-md-block">
-            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <div class="col-md-3 d-none d-md-block">
-            <img src="src/image/ayam1.jpg" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <div class="col-md-3 d-none d-md-block">
-            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <div class="col-md-3 d-none d-md-block">
-            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <!-- 2 items in first page on sm -->
-          <div class="col-sm-6 d-md-none">
-            <img src="src/image/ayam1.jpg" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <div class="col-sm-6 d-md-none">
-            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <!-- 4 items in second page on md -->
-          <div class="col-md-3 d-none d-md-block">
-            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <div class="col-md-3 d-none d-md-block">
-            <img src="src/image/ayam1.jpg" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <div class="col-md-3 d-none d-md-block">
-            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <div class="col-md-3 d-none d-md-block">
-            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <!-- 2 items in first page on sm -->
-          <div class="col-sm-6 d-md-none">
-            <img src="src/image/ayam1.jpg" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-          <div class="col-sm-6 d-md-none">
-            <img src="https://picsum.photos/200/100" class="w-100 rounded  pb-2" style="height: 15rem;" alt="">
-            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- carousel buttons -->
-    <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </a>
-  </div>
-  
-  
-  
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row mb-2">
+                      <div class="col-md-1 col-2">
+                        <img src="https://picsum.photos/60" alt="web logo" width="50" height="50" class="d-inline-block align-text-top">
+                      </div>
+                      <div class="col-md-10 col-8">
+                        <div class="row">
+                          <div class="col-12">
+                            <p class="fw-semibold">nama user</p>
+                            <p>comment user - 
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia odio at laborum iure fuga, eum, dolorem cum voluptas accusamus magnam sunt pariatur qui numquam minus? Ratione natus inventore facilis.
+                            </p>
+                            <small><a href="" class="text-decoration-none text-secondary">8h ago</a> &#x2022; <a href="" class="fw-semibold text-decoration-none text-primary">Reply</a></small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-2 d-flex flex-column justify-content-end align-items-center">
+                        <i class="fa-solid fa-heart text-secondary fs-5 text-center mx-1"></i>
+                        <i class="fa-solid fa-ellipsis-vertical text-secondary fs-5 text-center mx-1"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
