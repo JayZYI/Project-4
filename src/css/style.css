@@ -122,3 +122,12 @@
   .overlay-container .container {
     height: 100%;
   }
+
+  .novel:hover p
+  {
+    background-color: #f5f5f5;
+  }
+  .d-inline-block 
+  {
+    border-radius: 50%;
+  }
