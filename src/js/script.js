@@ -26,3 +26,16 @@ function toggleDropdown() {
   function off() {
     document.getElementById("overlay").style.display = "none";
   }
+
+  // get the button element
+  const toggleBtn = document.querySelector('#toggleBtn');
+
+  toggleBtn.addEventListener('click', function() {
+    // toggle the text content
+    if (toggleBtn.textContent === 'Show more') {
+      toggleBtn.textContent = 'Show less';
+    } else {
+      toggleBtn.textContent = 'Show more';
+    }
+  });
+  
