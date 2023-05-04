@@ -1,19 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Page</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+    
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    
+        <!-- css -->
+        <link rel="stylesheet" href="src/css/style.css">
+    
+        <!-- JS -->
+        <script src="src/js/script.js"></script>
+    
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
-</head>
+    </head>
 <body>
     
+<div class="container-fluid  shadow" id="">
+    <div class="row d-flex justify-content-center mx-auto py-2  w-50" id="">
+        <div class="col-md-5 d-flex align-items-center">
+            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="w-100 img-fluid" alt="">
+        </div>
+        <div class="col-md-7  align-items-center">
+            <p class="fw-bold text-center fs-2 pt-md-5 pt-sm-2 pb-md-5 pb-sm-3" id="subtitle">Novel Title</p>
+            <div class="row pt-2">
+            <div class="col-md-3 col-sm-6 text-center " >
+                <div class="row ">
+                    <i class="fa-regular fs-5 text-secondary fa-eye"></i>
+                    <p class="fs-6 fw-semibold">178K</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="row ">
+                    <i class="fa-solid fs-5 fa-star-half-stroke text-secondary"></i>
+                    <p class="fs-6 fw-semibold">4.8/5</p>
+                </div> 
+            </div>
+            <div class="col-md-3 col-sm-6 text-center " >
+                <div class="row ">
+                    <i class="fa-solid fs-5 fa-list-ul text-secondary"></i>
+                    <p class="fs-6 fw-semibold">102</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="row ">
+                    <i class="fa-solid fs-5 fa-book-open text-secondary"></i>
+                    <p class="fs-6 fw-semibold p-md-1">9h 5m</p>
+                </div> 
+            </div>
+        </div>
+            <a href="novel.html"><button type="button" class="btn btn-dark rounded-pill my-2 w-100">Start Reading</button></a>
+                    
+            </div>
+    </div>
+</div>
 
+<div class="container my-5" id="">
+    <div class="row mx-auto py-2   " id="">
+        <div class="col8">
+        <div class="row  mb-3 d-flex align-items-center fw-bold" >
+            <div class="col-auto ">
+                <img src="https://picsum.photos/60" alt="web logo" width="50" height="50" class="d-inline-block align-text-top d-flex align-items-center">
+
+            </div>
+            <div class="col-auto "> 
+                <p class="fs-5 ">Author</p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <span class="fs-6 mx-2 px-2 py-1 bg-secondary w-auto rounded-pill fw-semibold text-white "> Completed</span>
+        </div>
+        <div class="row mb-3">
+            <p class="fs-5">Novel Synopsis</p>
+        </div>
+        <div class="row">
+            <p class="fs-5">Tags</p>
+            <div class="col-md-12 ">        
+                <span class="fs-6 m4 px-2 py-1 bg-body-secondary w-auto rounded-pill fw-semibold text-secondary "> Completed</span>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="container shadow rounded mb-4" id="">
+    <div class="row mx-auto py-2   " id="">
+        
+        <p class="text-capitalize fs-5 fw-semibold">table of contents</p>
+        <div class="novel">
+            <p class=" px-2 py-3"><a href="novel.html" class="text-decoration-none text-dark text-capitalize "> Chapter novel</a></p>
+        </div>
+
+        <div class="novel">
+            <p class=" px-2 py-3"><a href="novel.html" class="text-decoration-none text-dark text-capitalize "> Chapter novel</a></p>
+        </div>
+    </div>
+</div>
 
 
 
