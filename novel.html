@@ -21,6 +21,44 @@
 
 </head>
 <body>
+<!-- top nav -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- web logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="https://picsum.photos/id/0/60" alt="web logo" width="50" height="50" class="d-inline-block align-text-top">
+    </a>
+
+    
+    <!-- genre offcanvas -->
+    <ul class="navbar-nav me-1 mb-2 mb-lg-0 d-none d-md-flex">
+          <a class="nav-link " data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" href="#">
+            Genre
+          </a>
+    </ul>
+
+    <!-- search form -->
+    <form class="d-flex mx-auto d-none d-sm-flex">
+      <button class="btn btn-outline-secondary me-2" type="submit">Search</button>
+      <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+    <!-- profile dropdown -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item  d-none d-md-flex">
+        <a class="nav-link " href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop2">
+          <img src="https://picsum.photos/60" alt="profile image" width="30" height="30" class="rounded-circle">
+          <span class="mx-2">TheDanzel</span>
+        </a>
+      </li>
+      <li class="nav-item   d-md-none">
+          <a class="nav-link " href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop2">
+            <img src="https://picsum.photos/60" alt="profile image" width="30" height="30" class="rounded-circle">
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
 
     <div class="container mt-3">
         <div class="row mx-auto mb-5 justify-content-center ">
@@ -284,6 +322,129 @@
     </div>
 
   </div>
+
+  <!-- OffCanfas Left -->
+<div class="offcanvas offcanvas-start " data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="staticBackdropLabel">Genre</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <a href="genre.html" class="text-dark text-decoration-none">
+      <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Adventure</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Romance</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Horror</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Adventure</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Romance</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Horror</p>
+          </div><div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Adventure</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Romance</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Horror</p>
+          </div><div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Adventure</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Romance</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Horror</p>
+          </div>
+
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title">Theme</h5>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Witch</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Monsters</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Survival</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Witch</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Monsters</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Survival</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Witch</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Monsters</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Survival</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Witch</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Monsters</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <p>Survival</p>
+          </div>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- OffCanfas right -->
+<div class="offcanvas offcanvas-end " tabindex="-1" id="staticBackdrop2" aria-labelledby="staticBackdropLabel">
+  <div class="offcanvas-body ">
+    <div>
+      <div class="row">
+          <p><a href="profile.html" class="text-decoration-none text-dark">Profile</a></p>
+          <hr>
+          <div class="d-md-none">
+              <p>
+                  <a class="nav-link " data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" href="#">
+                      Genre
+                  </a>                
+              </p>
+              <hr>
+          </div>
+          <div class="d-sm-none">
+              <p>
+                  <form class="d-flex m-auto">
+                      <button class="btn btn-outline-secondary me-2" type="submit">Search</button>
+                      <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                  </form>                
+              </p>
+              <hr>
+          </div>
+          <p><a href="settings.html" class="text-decoration-none text-dark">Settings</a></p>
+          <hr>
+          <p><a href="login.html" class="text-decoration-none text-dark">Log out</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <footer class="bg-light text-center text-white">
     <!-- Grid container -->
