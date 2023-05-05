@@ -127,3 +127,24 @@
     margin-right: auto;
     max-width: 50rem;
   }  
+  .novel:hover p
+  {
+    background-color: #f5f5f5;
+  }
+  .d-inline-block 
+  {
+    border-radius: 50%;
+  }
+  @media (min-width: 576px) {
+    /* styles for small devices */
+    .offcanvas-start {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    /* styles for medium devices */
+    .offcanvas-start {
+      width: 25%;
+    }
+  }
