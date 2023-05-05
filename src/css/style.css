@@ -121,3 +121,9 @@
   .overlay-container .container {
     height: 100%;
   }
+
+  .Settings {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem;
+  }  
