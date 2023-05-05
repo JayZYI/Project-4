@@ -130,3 +130,16 @@
   {
     border-radius: 50%;
   }
+  @media (min-width: 576px) {
+    /* styles for small devices */
+    .offcanvas-start {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    /* styles for medium devices */
+    .offcanvas-start {
+      width: 25%;
+    }
+  }
