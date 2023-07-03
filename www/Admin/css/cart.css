@@ -1,0 +1,155 @@
+body{
+
+    background-color: white; 
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;   
+    }
+    
+    /*Adding style in header*/
+    
+    header{
+       font-size: 20px;
+       padding: 15px;
+       margin-bottom: 25px;  
+       font-family:'Raleway', sans-serif;
+       display: flex;
+    
+    }
+    
+    /*Adding distancae in paragraph*/
+    
+    #p3 {
+       margin-left: 25px;
+       flex-basis: 33,3%;
+       margin-right: 900px;
+    }
+    
+    
+    #p4 {
+       flex-basis: 33,3%;
+    
+       margin-left: 25px;
+       
+    
+    }
+    
+    #p5 {
+       flex-basis: 33,3%;
+       margin-left: 25px;
+    
+    
+    }
+
+    table {
+        margin-left: auto;
+        margin-right: auto;    
+    }
+    
+    
+
+    #class1 {
+      width: 50px;
+      text-align: center;
+      padding : 10px 
+    }
+
+   #cart{
+    margin-left: 100px;
+    border-bottom : 1px solid black;
+    margin-bottom: 5px ;
+    margin-right : 100px;
+    }
+
+    #class2{
+        width: 200px;
+        text-align: center;
+        padding : 10px 
+    }
+
+    #class3{
+        width: 250px;
+        text-align: center;
+        padding : 10px 
+    } 
+
+    #class4{
+        width: 100px;
+        text-align: center;
+        padding : 10px 
+    }
+
+    #class5{
+        width: 100px;
+        text-align: center;
+        padding : 10px 
+    }
+    #class6{
+        width: 100px;
+        text-align: center;
+        padding : 10px 
+    }
+
+    #class7{
+        width: 100px;
+        text-align: center;
+        padding : 10px 
+    }
+
+    img{
+        height: 200px;
+        width: 200px;
+    }
+
+    footer{
+        position: relative;
+        margin-top :20px;
+     
+        background-color: black;
+        height :300px;
+        display: flex;  
+     }
+     
+     /*Adding style div*/
+     
+     footer div {
+      flex-basis: 33.3%;
+       color :white;
+     
+       margin-left: auto;
+       margin-right: auto;
+       
+     }
+     
+     
+     /*Adding distance footer between paragraph*/
+     
+     .one{
+        margin-bottom :25px;
+        margin-top : 25px;
+        margin-left :100px;
+        margin-right : 300px;
+     }
+     
+     
+     .two{ 
+        text-align: left;
+        margin : 25px
+     }
+     
+     .three{
+        text-align: left;
+        margin : 25px;
+     }
+     
+     .four{
+        
+        text-align: center;
+        border-top: 1px;
+        border-color: black;
+     }
+     
+     .one img{
+         height: 30px;
+         width: 30px;
+     }

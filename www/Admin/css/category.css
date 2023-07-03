@@ -1,0 +1,252 @@
+  body{
+
+    background-color: white; 
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;   
+    }
+    
+    /*Adding style in header*/
+    
+    header{
+       font-size: 20px;
+       padding: 15px;
+       margin-bottom: 25px;  
+       font-family:'Raleway', sans-serif;
+       display: flex;
+    
+    }
+    
+    /*Adding distancae in paragraph*/
+    
+    #p3 {
+       margin-left: 25px;
+       flex-basis: 33,3%;
+       margin-right: 900px;
+    }
+    
+    
+    #p4 {
+       flex-basis: 33,3%;
+    
+       margin-left: 25px;
+       
+    
+    }
+    
+    #p5 {
+       flex-basis: 33,3%;
+       margin-left: 25px;
+    
+    
+    }
+
+
+    #displayNumber{
+        text-align: left;
+      
+     }
+     
+     
+     /* distance text bestselle and common items*/
+     
+     .display {
+        padding-left: 80px; 
+         font-size: 15px;
+     }
+     
+     
+     /*Moving to be center on column items */
+     
+     
+
+
+     .button {
+   
+        /* properti pendukung */
+        font-size: 1.5em;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid black;
+        cursor: pointer;
+        font-family:'PT Sans', sans-serif;
+        margin-bottom:20px;
+
+        margin-left: 80px;
+        margin-bottom:20px;
+
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        font-size: 15px;
+     
+     
+     }
+     
+   
+
+  
+
+
+     .flex-container-column {
+        display: flex;
+        /* properti pendukung */
+        flex-direction: column;
+        text-align: center;
+     }
+     
+     /*Items to flex */
+     
+     .bestselle{
+        display: flex;
+        /* properti pendukung */
+        flex-direction: column;
+        max-width: 100%;   
+        text-align: center;
+     }
+     /*Image Items to sizing*/
+     
+     #ho{
+        width: 200px;
+        height: 200px;
+     }
+        
+     /*Item row to parallel*/
+     
+     .flex-container-row {
+      display: flex;
+       
+      margin-left: auto;
+      margin-right: auto;
+     
+     
+     }
+
+     .flex-container-roww {
+        display: flex;
+         
+        margin-left: 65px;
+        margin-right: auto;
+       
+       
+       }
+     
+     .flex-container-rows {
+        display: flex;
+         
+        margin-left: 50px;
+       
+       
+       
+       }
+       
+     
+     
+     .buttons {
+        /* properti pendukung */
+        font-size: 1.5em;
+        align-items: center;
+        padding-right: 140px;
+        padding-left: 140px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+     
+        border: 1px solid black;
+        cursor: pointer;
+        font-family:'PT Sans', sans-serif;
+        margin : 10px 20px;
+     
+       
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        font-size: 15px;
+     
+     
+     }
+     
+     
+     /*Adding style and distance items*/
+     
+     .button {
+        /* properti pendukung */
+        font-size: 1.5em;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid black;
+        cursor: pointer;
+        font-family:'PT Sans', sans-serif;
+       
+       margin : 10px 20px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        font-size: 15px;
+     
+     
+     }
+     
+
+
+
+
+
+
+
+
+
+
+
+
+    footer{
+        position: relative;
+        margin-top :20px;
+     
+        background-color: black;
+        height :300px;
+        display: flex;  
+     }
+     
+     /*Adding style div*/
+     
+     footer div {
+      flex-basis: 33.3%;
+       color :white;
+     
+       margin-left: auto;
+       margin-right: auto;
+       
+     }
+     
+     
+     /*Adding distance footer between paragraph*/
+     
+     .one{
+        margin-bottom :25px;
+        margin-top : 25px;
+        margin-left :100px;
+        margin-right : 300px;
+     }
+     
+     
+     .two{ 
+        text-align: left;
+        margin : 25px
+     }
+     
+     .three{
+        text-align: left;
+        margin : 25px;
+     }
+     
+     .four{
+        
+        text-align: center;
+        border-top: 1px;
+        border-color: black;
+     }
+     
+     .one img{
+         height: 30px;
+         width: 30px;
+     }

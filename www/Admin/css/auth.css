@@ -1,0 +1,104 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 13, 2022, 1:18:43 PM
+    Author     : Alex Zaro Daeli
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+
+	font-family: Raleway, sans-serif;
+}
+/*background body*/
+
+body {
+    background: linear-gradient(90deg, #FFFFFF, #F6F6F6);		
+
+    display: flex;
+    align-items: center;
+	justify-content: center;
+
+}
+/*adding size image*/
+
+img{
+ width: 100px;
+ height: 100px;
+ margin-left : 30px;
+}
+/*adding style to div form */
+
+.form{
+    background: linear-gradient(90deg, #FFFFFF, #F6F6F6);		
+	position: relative;	
+	height: 600px;
+	width: 360px;	
+	box-shadow: 0px 0px 24px #5C5696;
+
+}
+/*adding style to text form */
+
+.forms{
+          z-index: 1;
+        position: relative;	
+        height: 100%;
+
+}
+/*adding style to field text form */
+
+.regisField{
+    width: 320px;
+	padding: 30px;
+	padding-top:10px;
+}
+
+/*adding style to field text form */
+
+#lEmail, #lPassword, #rName, #rEmail,
+#rPassword, #rConfirmPassword{
+
+    margin-top:5px;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 100%;
+	transition: .3s;
+    border-radius: 10px;
+}
+
+/*adding style to button form */
+
+
+button{
+    font-size: 14px;
+margin-left:30px;
+padding: 10px 15px;
+border-radius: 26px;
+border: 1px solid #D4D3E8;
+text-transform: uppercase;
+font-weight: 700;
+ align-items: center;
+width: 50%;
+color: #4C489D;
+box-shadow: 0px 2px 2px #5C5696;
+cursor: pointer;
+transition: .2s;
+}
+
+/*adding style to text back to register*/
+
+
+a{
+    display:flex;
+    position: relative;	
+
+    margin-top:10px;
+    margin-left:30px;
+    color:black;
+    text-decoration: none;
+
+}

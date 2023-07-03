@@ -1,0 +1,358 @@
+ /*Adding font-family*/
+
+
+
+/*size when you zoom in 768px*/
+@media screen and (max-width: 768px) {
+   html,body {
+      margin:0;
+      padding:0;
+      overflow-x:hidden;
+  }
+  
+   #color{
+     width: 100%;
+     padding: 0;
+   }
+
+
+   header{
+      font-size: 2px;
+      padding: 10px;
+      margin-bottom: 25px;  
+      font-family:'Raleway', sans-serif;
+      display: flex;
+      flex-direction: column;
+   }   
+
+
+   #displayNumber {
+      padding-left: 0px; 
+       font-size: 15px;
+   }
+   
+      
+   .flex-container-row {
+   display: flex;
+   flex-direction: column;
+
+  }
+
+  .button 
+    {
+  
+        width: 60%;
+    }
+
+    .button button
+    {
+        font-size: 10px;
+    }
+
+   #ho{
+      max-width:100px;
+      max-height: 100px;
+   }
+
+   footer{
+      position: relative;
+      margin-top :2px;
+      z-index: 0;
+      font-size: small;
+      background-color: black;
+      height :150px;
+      display: flex;  
+      width: 100%;
+      font-size: 5px;
+  }
+  
+  footer div {
+      flex-basis: 33.3%;
+      color :white;
+    
+  }
+  
+  .one{
+     position: relative;
+      margin-bottom :0px;
+      margin-top : 0px;
+      margin-left :2px;
+      margin-right : 0px;
+
+  }
+  
+  .two{ 
+      text-align: left;
+      margin-left : 0px;
+   
+  }
+  
+  .three{
+      text-align: left;
+      margin : 0px;
+  }
+
+
+ }
+
+
+ 
+@media screen and (min-width: 5000px) {
+   #color{
+     max-width:25%;
+     padding: 0;
+   }
+
+   header{
+      margin-left: 1900px;
+
+      font-family:'Raleway', sans-serif;
+      display: flex;
+   
+   }
+
+   
+   
+ 
+      .display {
+         margin-left: 1800px;
+          font-size: 15px;
+      }
+      
+   
+}
+   
+
+  
+ 
+
+body{
+
+background-color: white; 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;   
+}
+
+/*Adding style in header*/
+
+header{
+   font-size: 20px;
+   padding: 15px;
+   margin-bottom: 25px;  
+   font-family:'Raleway', sans-serif;
+   display: flex;
+
+}
+
+#he{
+   height: 50px;
+   width: 50px;
+}
+
+/*Adding distancae in paragraph*/
+
+#p3 {
+   margin-left: 25px;
+   flex-basis: 33,3%;
+   margin-right: 900px;
+}
+
+
+#p4 {
+   flex-basis: 33,3%;
+
+   margin-left: 25px;
+   
+
+}
+
+#p5 {
+   flex-basis: 33,3%;
+   margin-left: 25px;
+
+
+}
+
+/*Adding size image*/
+#color {
+   width:90%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+
+   border-radius: 10px;
+ 
+}
+
+/*Moving to left text bestselle and common items*/
+
+#displayNumber{
+   text-align: left;
+ 
+}
+
+
+/* distance text bestselle and common items*/
+
+.display {
+   padding-left: 80px; 
+    font-size: 15px;
+}
+
+
+/*Moving to be center on column items */
+
+
+.flex-container-column {
+   display: flex;
+   /* properti pendukung */
+   flex-direction: column;
+   text-align: center;
+}
+
+/*Items to flex */
+
+.bestselle{
+   display: flex;
+   /* properti pendukung */
+   flex-direction: column;
+   max-width: 100%;   
+   text-align: center;
+}
+/*Image Items to sizing*/
+
+#ho{
+   width: 200px;
+   height: 200px;
+}
+   
+/*Item row to parallel*/
+
+.flex-container-row {
+ display: flex;
+  
+ margin-left: auto;
+ margin-right: auto;
+
+
+}
+
+
+
+.buttons {
+   /* properti pendukung */
+   font-size: 1.5em;
+   align-items: center;
+   padding-right: 140px;
+   padding-left: 140px;
+   padding-bottom: 15px;
+   padding-top: 15px;
+
+   border: 1px solid black;
+   cursor: pointer;
+   font-family:'PT Sans', sans-serif;
+   margin : 10px 20px;
+
+  
+   border: none;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   font-size: 15px;
+
+
+}
+
+
+/*Adding style and distance items*/
+
+.button {
+   /* properti pendukung */
+   font-size: 1.5em;
+   text-align: center;
+   padding: 20px;
+   border: 1px solid black;
+   cursor: pointer;
+   font-family:'PT Sans', sans-serif;
+  
+  margin : 10px 20px;
+   border: none;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   font-size: 15px;
+
+
+}
+
+
+/*Adding style button detailed*/
+
+button {
+   font-size: 15px;
+   display: inline; 
+ 
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #D61C4E;
+   border: none;
+   color: white; 
+   align-items: center;
+   border-radius: 5px;
+   cursor: pointer;   
+   padding: 5px 10px;
+}
+
+/*Adding style footer*/
+
+footer{
+   position: relative;
+   margin-top :20px;
+
+   background-color: black;
+   height :300px;
+   display: flex;  
+}
+
+/*Adding style div*/
+
+footer div {
+ flex-basis: 33.3%;
+  color :white;
+
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+/*Adding distance footer between paragraph*/
+
+.one{
+   margin-bottom :25px;
+   margin-top : 25px;
+   margin-left :100px;
+   margin-right : 300px;
+   height: 20px;
+   width: 20px;
+}
+
+
+.two{ 
+   text-align: left;
+   margin : 25px
+}
+
+.three{
+   text-align: left;
+   margin : 25px;
+}
+
+.four{
+   
+   text-align: center;
+   border-top: 1px;
+   border-color: black;
+}
