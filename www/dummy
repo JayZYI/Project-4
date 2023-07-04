@@ -1,52 +1,630 @@
- 
- 
-            <div class="row" >
-                <div class="col-md-12">
-                        <div class="row mb-2">
-                        <div class="col-md-1">        
-                            <img src="https://picsum.photos/60" alt="web logo" width="50" height="50" class="d-inline-block align-text-top">
-                        </div>
-                        <div class="col-md-10">
-                            <div class="row">
-                                <p class="fw-semibold">nama user</p>
-                                <p>comment user - 
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia odio at laborum iure fuga, eum, dolorem cum voluptas accusamus magnam sunt pariatur qui numquam minus? Ratione natus inventore facilis.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
 
-                                </p>
-                                <small><a href="" class="text-decoration-none text-secondary">8h ago</a> &#x2022; <a href="" class="fw-semibold text-decoration-none text-primary">Reply</a> </small>
-                            </div>
-                        </div>
-                        <div class="col-md-1 px-sm-2" style="padding: 0px;">
-                                <i class="fa-solid fa-ellipsis-vertical text-secondary fs-5 text-center mx-1"></i>
-                                <i class="fa-regular fa-heart text-secondary fs-5 text-center mx-1"></i>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- JS -->
+    <script src="src/js/script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+      <!-- https://picsum.photos/60 -->
+<!-- top nav -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- web logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="https://picsum.photos/id/0/60" alt="web logo" width="50" height="50" class="d-inline-block align-text-top">
+      </a>
+  
+      
+      <!-- genre offcanvas -->
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0 d-none d-md-flex">
+            <a class="nav-link " data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" href="#">
+              Genre
+            </a>
+      </ul>
+  
+      <!-- search form -->
+      <form class="d-flex mx-auto d-none d-sm-flex">
+        <button class="btn btn-outline-secondary me-2" type="submit">Search</button>
+        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+        </form>
+  
+      <!-- profile dropdown -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item  d-none d-md-flex">
+          <a class="nav-link " href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop2">
+            <img src="https://picsum.photos/60" alt="profile image" width="30" height="30" class="rounded-circle">
+            <span class="mx-2">TheDanzel</span>
+          </a>
+        </li>
+        <li class="nav-item   d-md-none">
+            <a class="nav-link " href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop2">
+              <img src="https://picsum.photos/60" alt="profile image" width="30" height="30" class="rounded-circle">
+            </a>
+          </li>
+      </ul>
+    </div>
+</nav>
+
+<div class="container mt-3">
+    <div class="row mx-auto mb-5 justify-content-center">
+      <div class="col-md-8 my-5">
+        <div class="row">
+          <div class="col-sm-10 offset-sm-1 col-md-12 offset-md-0">
+
+            <div class="carousel slide" data-bs-ride="carousel" data-bs-slide="false" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="src/image/arli.jpg" class="d-block rounded w-100" alt="..." id="shadow">
+                        <div class="carousel-caption w-100 d-none d-md-block carousel-caption-bottom" id="">
+                            <h5>Arlington</h5>
+                            <p>by Daleo</p>
                         </div>
                     </div>
+                    <div class="carousel-item">
+                        <img src="src/image/jeje.jpg" class="d-block rounded w-100" alt="..." id="shadow">
+                        <div class="carousel-caption w-100 d-none d-md-block carousel-caption-bottom" id="">
+                            <h5>Jealousy</h5>
+                            <p>by Jayden</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="src/image/hate.jpg" class="d-block rounded w-100" alt="..." id="shadow">
+                        <div class="carousel-caption w-100 d-none d-md-block carousel-caption-bottom" id="">
+                            <h5>Hate</h5>
+                            <p>by Rizk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
             </div>
 
-            <div class="container">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="row mb-2">
-                      <div class="col-md-1 col-2">
-                        <img src="https://picsum.photos/60" alt="web logo" width="50" height="50" class="d-inline-block align-text-top">
-                      </div>
-                      <div class="col-md-10 col-8">
+            <div class="row py-5">
+                <p class="fw-normal fs-4">Welcome Back User!</p>
+                <hr>
+            </div>
+
+
+
+            <!-- <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+            </div> -->
+            <div class="row py-5" id="">
+                <p class="fw-bold fs-4 ">Top Picks for You</p>
+                <!-- <hr class="mb-4"> -->
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
                         <div class="row">
-                          <div class="col-12">
-                            <p class="fw-semibold">nama user</p>
-                            <p>comment user - 
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia odio at laborum iure fuga, eum, dolorem cum voluptas accusamus magnam sunt pariatur qui numquam minus? Ratione natus inventore facilis.
-                            </p>
-                            <small><a href="" class="text-decoration-none text-secondary">8h ago</a> &#x2022; <a href="" class="fw-semibold text-decoration-none text-primary">Reply</a></small>
-                          </div>
+
+                        <!-- 4 items in first page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
                         </div>
-                      </div>
-                      <div class="col-md-1 col-2 d-flex flex-column justify-content-end align-items-center">
-                        <i class="fa-solid fa-heart text-secondary fs-5 text-center mx-1"></i>
-                        <i class="fa-solid fa-ellipsis-vertical text-secondary fs-5 text-center mx-1"></i>
-                      </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/229670822-416-k364213.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/216800645-176-k220205.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/149992126-176-k780650.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+
+                        <!-- 2 items in first page on sm -->
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/229670822-416-k364213.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>                      
+                        </div>
+                       
                     </div>
-                  </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                        <!-- 4 items in second page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/129203843-176-k30845.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/40812659-176-k688.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/22343207-176-k452423.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/6909043-176-k539373.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+
+                        <!-- 2 items in second page on sm -->
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/216800645-176-k220205.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/149992126-176-k780650.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>                      
+                        </div>
+                        </div>
+                    </div>
+                    <!-- carousel buttons -->
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </a>                    
                 </div>
-              </div>
+            </div>
+
+            <div class="row py-5" >
+                <p class="fw-bold fs-4" id="subtitle">Completed Stories</p>
+                <p class=" fs-6 text-secondary" style="text-transform: capitalize;">Statisfy your desire from start to finish</p>
+
+                <div class="row rounded shadow m-1 p-4 mb-3" id="">
+                    <div class="col-md-3 col-sm-block" id="">
+                        <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg"  class="img-fluid w-100 rounded pb-1" alt="Open Modal" data-bs-toggle="modal" data-bs-target="#exampleModal" style="max-height: 15rem;">
+                    </div>
+                    <div class="col-md-9 col-sm-block my-3" id="">
+                        <p class="fw-bold fs-4 " id="subtitle">Arlington</p>
+                        <p class="fs-6 text-secondary" style="-webkit-line-clamp: 6; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;">Synopsis - 
+                            Aviva Arlington has never seen the world the way everyone else does, but she's always been very content hiding behind half-inch thick frames. She was raised to ignore her abilities and channel her energy elsewhere, but one day she has to make a life-altering choice, she can continue to ignore her abilities, or she can use her talents to help everyone around her before things continue their violent spiral out of control. Follow Aviva Arlington on her adventure navigating school, her two new CEO best friends, and being a metahuman.  
+
+                        </p>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                    </div>
+                </div>
+
+                <div id="carouselExampleSecond" class="carousel slide mt-4">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                        <!-- 4 items in first page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/64338097-176-k390589.jpg" class="img-fluid w-100 rounded pb1" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/198677569-176-k814564.jpg" class="img-fluid w-100 rounded pb1" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/765329-176-k688944.jpg" class="img-fluid rounded pb1 w-100" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/289526735-176-k987558.jpg" class="img-fluid rounded pb1 w-100" alt="" style="max-height: 15rem;">
+
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <!-- 2 items in first page on sm -->
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/64338097-176-k390589.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/198677569-176-k814564.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>                      
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                        <!-- 4 items in second page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/234410453-176-k642208.jpg" class="w-100 rounded  pb1" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/151033001-176-k141160.jpg" class="w-100 rounded  pb1" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/95763479-176-k92135.jpg" class="w-100 rounded  pb1" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/82040526-176-k802707.jpg" class="w-100 rounded  pb1" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <!-- 2 items in first page on sm -->
+                        <div class="col-sm-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/765329-176-k688944.jpg" class="w-100 rounded  pb1" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-sm-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/289526735-176-k987558.jpg" class="w-100 rounded  pb1" style="height: 15rem;" alt="">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- carousel buttons -->
+                    <a class="carousel-control-prev" href="#carouselExampleSecond" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleSecond" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row py-5" id="">
+                <p class="fw-bold fs-4 ">Editor Pick</p>
+                <!-- <hr class="mb-4"> -->
+                <div id="carouselExample3" class="carousel slide">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+
+                        <!-- 4 items in first page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/311578406-176-k540650.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/323053325-176-k738063.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/284866947-176-k346586.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/97728300-176-k249036.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+
+                        <!-- 2 items in first page on sm -->
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/311578406-176-k540650.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/323053325-176-k738063.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>                      
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                        <!-- 4 items in second page on md -->
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/279715262-176-k898270.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/106959201-176-k613809.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/172984829-176-k685161.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="https://img.wattpad.com/cover/123473606-176-k61288.jpg" class="img-fluid w-100 rounded pb1" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" style="max-height: 15rem;" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+
+                        <!-- 2 items in second page on sm -->
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/284866947-176-k346586.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>
+                        <div class="col-6 d-md-none">
+                            <img src="https://img.wattpad.com/cover/97728300-176-k249036.jpg" class="img-fluid rounded w-100 pb1" alt="" style="max-height: 15rem;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="on()">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm genre" style="opacity: 0.7;">Genre</button>
+                        </div>                      
+                        </div>
+                        </div>
+                    </div>
+                    <!-- carousel buttons -->
+                    <a class="carousel-control-prev" href="#carouselExample3" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExample3" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </a>                    
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  
+<!-- <div id="overlay" onclick="off()">
+    <div class="container position-absolute top-50 start-50 translate-middle shadow overlay-container">
+      <div class="row ">
+        <div class="col-md-5 h-100 d-flex align-items-center">
+          <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="img-fluid rounded" style="max-height: 15rem; object-fit: cover; max-width: 100%;" alt="" onclick="on()">
+        </div>
+        <div class="col-md-7">
+          <p>Content here in col-md-7</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+        <div class="row">
+            <div class="col-5">
+                <img src="https://img.wattpad.com/cover/165557073-416-k994402.jpg" class="w-100 img-fluid" alt="">
+            </div>
+            <div class="col-7">
+                <p class="fw-bold fs-4 mb-2" id="subtitle">Arlington</p>
+                <span class="fs-6 px-2 py-1 bg-secondary rounded-pill fw-semibold text-white "> Completed</span>
+                <a href="novel.html"><button type="button" class="btn btn-dark rounded-pill my-2 w-100">Start Reading</button></a>
+                        <p class="fs-6 text-secondary mt-3" style="-webkit-line-clamp: 7; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;">Novel Synopsis - 
+                            Aviva Arlington has never seen the world the way everyone else does, but she's always been very content hiding behind half-inch thick frames. She was raised to ignore her abilities and channel her energy elsewhere, but one day she has to make a life-altering choice, she can continue to ignore her abilities, or she can use her talents to help everyone around her before things continue their violent spiral out of control. Follow Aviva Arlington on her adventure navigating school, her two new CEO best friends, and being a metahuman.
+
+                        </p>
+                <p class=""></p><a class="link-opacity-100 fw-semibold text-dark d-flex justify-content-end w-100 link-underline link-underline-opacity-0" href="detail.html">More Detail ></a></p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!-- OffCanfas Left -->
+<div class="offcanvas offcanvas-start " data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel">Genre</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <a href="genre.html" class="text-dark text-decoration-none">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Adventure</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Romance</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Horror</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Adventure</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Romance</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Horror</p>
+            </div><div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Adventure</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Romance</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Horror</p>
+            </div><div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Adventure</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Romance</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Horror</p>
+            </div>
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Theme</h5>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Witch</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Monsters</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Survival</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Witch</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Monsters</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Survival</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Witch</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Monsters</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Survival</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Witch</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Monsters</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <p>Survival</p>
+            </div>
+        </div>
+        </a>
+      </div>
+    </div>
+</div>
+
+<!-- OffCanfas right -->
+<div class="offcanvas offcanvas-end " tabindex="-1" id="staticBackdrop2" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-body ">
+      <div>
+        <div class="row">
+            <p><a href="profile.html" class="text-decoration-none text-dark">Profile</a></p>
+            <hr>
+            <div class="d-md-none">
+                <p>
+                    <a class="nav-link " data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" href="#">
+                        Genre
+                    </a>                
+                </p>
+                <hr>
+            </div>
+            <div class="d-sm-none">
+                <p>
+                    <form class="d-flex m-auto">
+                        <button class="btn btn-outline-secondary me-2" type="submit">Search</button>
+                        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                    </form>                
+                </p>
+                <hr>
+            </div>
+            <p><a href="settings.html" class="text-decoration-none text-dark">Settings</a></p>
+            <hr>
+            <p><a href="login.html" class="text-decoration-none text-dark">Log out</a></p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- footer -->
+
+    <footer class="bg-light text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #3b5998;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #55acee;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #dd4b39;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #ac2bac;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #0082ca;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #333333;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
+</html>

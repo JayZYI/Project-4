@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="genreName"></h1>
+
+
+    <script>
+        // Function to retrieve the value of a query parameter from the URL
+        function getQueryParam(name) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(name);
+        }
+      
+        // Retrieve the selected genre name from the query parameter
+        const selectedGenre = getQueryParam('category');
+      
+        // Display the selected genre name on the page
+        const genreNameElement = document.getElementById('genreName');
+        genreNameElement.textContent = selectedGenre;
+      </script>
+      
+</body>
+</html>

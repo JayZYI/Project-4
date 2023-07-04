@@ -95,6 +95,7 @@ function create() {
       .catch(function(error) {
         console.error('Error uploading image:', error);
       });
+      // reload_page();
   }
   
   
@@ -102,7 +103,7 @@ function create() {
     function tagcreate(){
         console.log();
         console.log("sky is red");
-        var model = document.getElementById('t_create').value;
+        var model = document.getElementById('tm_create').value;
         var uid = firebase.database().ref().child('Category').push().key;
         var data = {
             CatName: model
