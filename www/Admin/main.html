@@ -60,9 +60,15 @@
     </nav>
 
 
-    
-
-<button type="button" class="btn btn-primary ms-5 my-2 mt-5" data-bs-toggle="modal" data-bs-target="#exampleModel">New Data Entry</button>
+    <div class="rows ">
+      <div class="col2">
+        <button type="button" class="btn btn-primary ms-5 my-2 mt-5 " data-bs-toggle="modal" data-bs-target="#chapterModal">Add Chapters</button>
+  
+        <button type="button" class="btn btn-primary ms-1 my-2 mt-5" data-bs-toggle="modal" data-bs-target="#tagModal">Add tags</button>  
+      </div>
+      <button type="button" class="btn btn-primary ms-5 my-2 " data-bs-toggle="modal" data-bs-target="#exampleModel">New Novel Entry</button>
+      
+    </div>
 
 <div class="read px-5 ">
     <h2>Data Table</h2>
@@ -95,8 +101,63 @@
 
 
 
+<!-- chapter -->
+<div class="modal fade" id="chapterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+          <div class="create">
+              <h2 class="mb-4">Chapter</h2>
+              <h2 id=""></h2>
+              <form>
+            
+                <label >Novel:</label>
+                <select name="brandCreate" id="n_create">
+                    <!-- Options will be dynamically populated by JavaScript -->
+                </select>
+                <br><br>
+
+                <label>Chapter Name :</label>
+                <input type="text" id="chp_create" name="model">
+                <br><br>
+
+                <label>text :</label>
+                <textarea type="text" id="t_create" name="model"></textarea>
+                <br><br>
+
+                  <button type="button" class="btn btn-success" value="Create" onclick="chapcreate();">Add</button>
+
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<!-- tag -->
+<div class="modal fade" id="tagModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+          <div class="create">
+              <h2 class="mb-4">Tag</h2>
+              <h2 id=""></h2>
+              <form>
+                <label>New Tag :</label>
+                <input type="text" id="t_create" name="model">
+                <br><br>
+            
+                  <button type="button" class="btn btn-success" value="Create" onclick="tagcreate();">Add</button>
+
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -107,48 +168,35 @@
       <div class="modal-content">
         <div class="modal-body">
             <div class="create">
-                <h2 class="mb-4">Create Shoe</h2>
+                <h2 class="mb-4">Create Novel</h2>
                 <h2 id=""></h2>
                 <form>
-                  <label >Brand:</label>
-                  <select name="brandCreate" id="b_create">
-                      <!-- Options will be dynamically populated by JavaScript -->
+                  <label >Title:</label>
+                  <input type="text" id="ttl_create" name="model">
+                  <br><br>
+                  
+                  <label>Novel Cover :</label>
+                  <input type="file" id="imageFile">
+                  <br><br>
+                  <!-- oninput="formatPrice(this)" -->
+                  <label>Views :</label>
+                  <input type="text" id="v_create" name="model"  required>
+                  <br><br>
+              
+                  <label>Chapters :</label>
+                  <input type="text" id="chpt_create" name="stockInput"  required>
+                  <br><br>
+              
+                  <label>Read Times:</label>
+                  <input type="text" id="rt_create" name="priceInput"  required>
+                  <br><br>
+                  
+                  <label>Tag:</label>
+                  <select name="tagCreate" id="c_create">
+                    <!-- Options will be dynamically populated by JavaScript -->
                   </select>
                   <br><br>
                   
-                  <label>Model:</label>
-                  <input type="text" id="m_create" name="model">
-                  <br><br>
-                  
-                  <label>Category:</label>
-                  <select name="categoryCreate" id="c_create">
-                      <!-- Options will be dynamically populated by JavaScript -->
-                  </select>
-                  <br><br>
-              
-                  <label>Size:</label>
-                  <select id="si_create" name="si_create" required>
-                      <option value="38">38</option>
-                      <option value="39">39</option>
-                      <option value="40">40</option>
-                      <option value="41">41</option>
-                      <option value="42">42</option>
-                      <option value="43">43</option>
-                      <option value="44">44</option>
-                  </select>
-                  <br><br>
-              
-                  <label>Stock:</label>
-                  <input type="text" id="st_create" name="stockInput" oninput="formatPrice(this)" required>
-                  <br><br>
-              
-                  <label>Price:</label>
-                  <input type="text" id="pr_create" name="priceInput" oninput="formatPrice(this)" required>
-                  <br><br>
-                  
-                  <label>Img URL:</label>
-                  <input type="text" id="img_create" name="model">
-                  <br><br>
               
                     <button type="button" class="btn btn-success" value="Create" onclick="create();">Create</button>
                 </form>
@@ -261,6 +309,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
 
 <!-- Config -->
 <script>
@@ -365,7 +414,7 @@
 </script>
 
 <!-- Dropdown Option -->
-<script>
+<!-- <script>
     var databaseBRef = firebase.database().ref('Brand');
   databaseBRef.once('value', function(snapshot) {
     var select = document.getElementById("b_create");
@@ -377,21 +426,53 @@
       select.appendChild(option);
     });
   });
-</script>
+</script> -->
 <script>
     var databaseCRef = firebase.database().ref('Category');
   databaseCRef.once('value', function(snapshot) {
-    var select = document.getElementById("c_create");
+    var select = document.getElementById("t_create");
     snapshot.forEach(function(childSnapshot) {
       var brandName = childSnapshot.child("CatName").val();
       var option = document.createElement("option");
       option.value = brandName;
       option.text = brandName;
       select.appendChild(option);
+
+      
+  console.log(option);
     });
   });
+  console.log("sky is blue");
+
+</script>
+
+<script>
+  var databaseCRef = firebase.database().ref('Category');
+databaseCRef.once('value', function(snapshot) {
+  var select = document.getElementById("c_create");
+  snapshot.forEach(function(childSnapshot) {
+    var brandName = childSnapshot.child("CatName").val();
+    var option = document.createElement("option");
+    option.value = brandName;
+    option.text = brandName;
+    select.appendChild(option);
+  });
+});
 </script>
 <script>
+  var databaseCRef = firebase.database().ref('novel');
+databaseCRef.once('value', function(snapshot) {
+  var select = document.getElementById("n_create");
+  snapshot.forEach(function(childSnapshot) {
+    var brandName = childSnapshot.child("title").val();
+    var option = document.createElement("option");
+    option.value = brandName;
+    option.text = brandName;
+    select.appendChild(option);
+  });
+});
+</script>
+<!-- <script>
     var databaseBRef = firebase.database().ref('Brand');
   databaseBRef.once('value', function(snapshot) {
     var select = document.getElementById("b_update");
@@ -416,7 +497,7 @@
       select.appendChild(option);
     });
   });
-</script>
+</script> --> -->
 
 <!-- Update -->
 </body>

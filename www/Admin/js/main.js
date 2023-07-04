@@ -3,42 +3,140 @@ function reload_page(){
     }
 
 // Create
-function create(){
-    console.log();
-    console.log("sky is red");
-    // var brand = document.getElementById('b_create').value;
-    var brandSelect = document.getElementById('b_create');
-    var brand = brandSelect.options[brandSelect.selectedIndex].value;
+// function create(){
+//     console.log();
+//     console.log("sky is red");
+//     // var brand = document.getElementById('b_create').value;
+//     var brandSelect = document.getElementById('t_create');
+//     var brand = brandSelect.options[brandSelect.selectedIndex].value;
 
-    var model = document.getElementById('m_create').value;
-    // var cat = document.getElementById('c_create').value;
-    var categorySelect = document.getElementById('c_create');
-    var cat = categorySelect.options[categorySelect.selectedIndex].value;  
+//     var title = document.getElementById('ttl_create').value;
 
-    // var size = document.getElementById('si_create').value;
-    var sizeSelect = document.getElementById('si_create');
-    var size = sizeSelect.options[categorySelect.selectedIndex].value;
+//     var model = document.getElementById('m_create').value;
+//     // var cat = document.getElementById('c_create').value;
+//     var categorySelect = document.getElementById('t_create');
+//     var cat = categorySelect.options[categorySelect.selectedIndex].value;  
+
+//     // var size = document.getElementById('si_create').value;
+//     var sizeSelect = document.getElementById('si_create');
+//     var size = sizeSelect.options[categorySelect.selectedIndex].value;
   
-    var stock = document.getElementById('st_create').value;
-    var image = document.getElementById('img_create').value;
+//     var stock = document.getElementById('st_create').value;
+//     var image = document.getElementById('img_create').value;
 
-    var price = document.getElementById('pr_create').value;
-    var uid = firebase.database().ref().child('shoe').push().key;
-    var data = {
-        URLImg: image,
-        brand: brand,
-        model: model,
-        category: cat,
-        size : size,
-        stock : stock,
-        price : price
+//     var price = document.getElementById('pr_create').value;
+//     var uid = firebase.database().ref().child('novel').push().key;
+//     var data = {
+//         title : title,
+//         cover : image,
+//         views : model,
+//         rating : cat,
+//         chapters : size,
+//         readTimes : stock,                                                                                                                                                                                   
+//         tags : 
+//         }
+//     var updates = {};
+//     updates['/shoe/' + uid] = data;
+//     firebase.database().ref().update(updates);
+//     alert('New Shoe has created successfully!');
+//     reload_page();
+//     }
+function create() {
+    console.log();
+    console.log("create function called");
+  
+    var title = document.getElementById('ttl_create').value;
+    var views = document.getElementById('v_create').value;
+    var chapters = document.getElementById('chpt_create').value;
+    var readTimes = document.getElementById('rt_create').value;
+    var categorySelect = document.getElementById('c_create');
+    var tag = categorySelect.options[categorySelect.selectedIndex].value;
+  
+    // Get the selected image file
+    var imageFile = document.getElementById('imageFile').files[0];
+  
+    // Create a storage reference to store the image file
+    var storageRef = firebase.storage().ref().child('novelCovers/' + imageFile.name);
+  
+    // Upload the image file to Firebase Storage
+    storageRef.put(imageFile)
+      .then(function(snapshot) {
+        console.log('Image uploaded successfully');
+  
+        // Get the download URL of the uploaded image
+        storageRef.getDownloadURL()
+          .then(function(url) {
+            // Create a new novel object with the image URL
+            var novel = {
+              title: title,
+              novelCover: url,
+              views: views,
+              chapters: chapters,
+              readTimes: readTimes,
+              tag: tag
+            };
+  
+            // Push the new novel object to the database
+            var novelRef = firebase.database().ref('novel').push();
+            novelRef.set(novel)
+              .then(function() {
+                alert('New Novel has been created successfully!');
+                // Reload the page or perform any other desired action
+                // reload_page();
+              })
+              .catch(function(error) {
+                console.error('Error creating novel:', error);
+              });
+          })
+          .catch(function(error) {
+            console.error('Error getting download URL:', error);
+          });
+      })
+      .catch(function(error) {
+        console.error('Error uploading image:', error);
+      });
+  }
+  
+  
+
+    function tagcreate(){
+        console.log();
+        console.log("sky is red");
+        var model = document.getElementById('t_create').value;
+        var uid = firebase.database().ref().child('Category').push().key;
+        var data = {
+            CatName: model
+            }
+        var updates = {};
+        updates['/Category/' + uid] = data;
+        firebase.database().ref().update(updates);
+        alert('New tag has created successfully!');
+        reload_page();
         }
-    var updates = {};
-    updates['/shoe/' + uid] = data;
-    firebase.database().ref().update(updates);
-    alert('New Shoe has created successfully!');
-    reload_page();
-    }
+
+    function chapcreate(){
+        console.log();
+        console.log("sky is red");
+        var novel = document.getElementById('n_create').value;
+        var ctitle = document.getElementById('chp_create').value;
+        var content = document.getElementById('t_create').value;
+
+        var novel = document.getElementById('n_create').value;
+
+        var uid = firebase.database().ref().child('chap').push().key;
+        var data = {
+            novel : novel,
+            chapTitle : ctitle,
+            content : content
+            }
+        var updates = {};
+        updates['/chap/' + uid] = data;
+        firebase.database().ref().update(updates);
+        alert('New chapter has created successfully!');
+        reload_page();
+        }    
+            
+    
 
 
     function showSelectedValues() {
