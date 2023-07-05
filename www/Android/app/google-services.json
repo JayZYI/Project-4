@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "962770911192",
+    "firebase_url": "https://shoestore-e4189-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "shoestore-e4189",
+    "storage_bucket": "shoestore-e4189.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962770911192:android:0ba42d4f5a6dc6d419fcad",
+        "android_client_info": {
+          "package_name": "com.example.project4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962770911192-8uedomrtm8bgbm19b77053t4js4ggl8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF0jtBtbNm_WhgjnnJ2oGPyyQW7TVvHOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962770911192-3nqkm44pma8ejfjsd7df22sroid92h6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
