@@ -37,7 +37,7 @@ public class fragmenthome extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         // Create a instance of the database and get its reference
-        mbase = FirebaseDatabase.getInstance().getReference();
+        mbase = FirebaseDatabase.getInstance().getReference().child("category");
 
         // It is a class provided by the FirebaseUI to make a query in the database to fetch appropriate data
         FirebaseRecyclerOptions<modelNovel> options = new FirebaseRecyclerOptions.Builder<modelNovel>()

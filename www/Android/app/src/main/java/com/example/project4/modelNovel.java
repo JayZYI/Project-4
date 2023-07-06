@@ -1,6 +1,7 @@
 package com.example.project4;
 
 public class modelNovel {
+        private String CatName;
         private String id;
         private String title;
         private String tag;
@@ -66,4 +67,11 @@ public class modelNovel {
         public int getViewTimes() {
             return viewTimes;
         }
+    public String getCatName() {
+        return CatName;
+    }
+
+    public void setCatName(String catName) {
+        CatName = catName;
+    }
 }
