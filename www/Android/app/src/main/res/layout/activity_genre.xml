@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Genre">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text5">
+
+    </TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
