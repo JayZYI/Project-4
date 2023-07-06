@@ -1,14 +1,16 @@
-package com.example.project4;
+package com.example.project4.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Genre extends AppCompatActivity {
+import com.example.project4.R;
+
+public class Novel extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_genre);
+        setContentView(R.layout.activity_novel);
     }
 }

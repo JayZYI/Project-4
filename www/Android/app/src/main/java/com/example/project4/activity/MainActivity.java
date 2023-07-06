@@ -1,4 +1,4 @@
-package com.example.project4;
+package com.example.project4.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,6 +9,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.project4.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -42,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.action_search:
                                 viewPager.setCurrentItem(1);
                                 return true;
-                            case R.id.action_profile:
-                                viewPager.setCurrentItem(2);
-                                return true;
                         }
                         return false;
                     }
@@ -54,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager() {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new fragmenthome());
-        adapter.addFragment(new fragmentprofile());
         adapter.addFragment(new fragmentsearch());
         viewPager.setAdapter(adapter);
 
@@ -72,9 +69,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         bottomNavigationView.setSelectedItemId(R.id.action_search);
-                        break;
-                    case 2:
-                        bottomNavigationView.setSelectedItemId(R.id.action_profile);
                         break;
                 }
             }
