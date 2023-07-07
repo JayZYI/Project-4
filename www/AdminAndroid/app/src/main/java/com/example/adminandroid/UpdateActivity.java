@@ -1,9 +1,13 @@
 package com.example.adminandroid;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +16,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class UpdateActivity extends AppCompatActivity {
+public class UpdateActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText edtNim, edtNama;
     private Button btnUpdate;
@@ -67,7 +71,7 @@ public class UpdateActivity extends AppCompatActivity {
 
     }
 
-    private void updateMahasiswa() {
+    public void updateMahasiswa() {
         String nama = edtNama.getText().toString().trim();
         String nim = edtNim.getText().toString().trim();
 
@@ -100,4 +104,79 @@ public class UpdateActivity extends AppCompatActivity {
 
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_form, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //pilih menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_delete:
+                //menampilkan dialog
+                showAlertDialog(ALERT_DIALOG_DELETE);
+                break;
+            case android.R.id.home:
+                showAlertDialog(ALERT_DIALOG_CLOSE);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        showAlertDialog(ALERT_DIALOG_CLOSE);
+    }
+
+    private void showAlertDialog(int type) {
+        final boolean isDialogClose = type == ALERT_DIALOG_CLOSE;
+        String dialogTitle, dialogMessage;
+
+        if (isDialogClose) {
+            dialogTitle = "Batal";
+            dialogMessage = "Apakah anda ingin membatalkan perubahan pada form";
+        } else {
+            dialogTitle = "Hapus Data";
+            dialogMessage = "Apakah anda yakin ingin menghapus item ini";
+        }
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        alertDialogBuilder.setTitle(dialogTitle);
+        alertDialogBuilder.setMessage(dialogMessage)
+                .setCancelable(false)
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        if (isDialogClose) {
+                            finish();
+                        } else {
+                            //hapus data
+                            DatabaseReference dbMahasiswa =
+                                    mDatabase.child("mahasiswa").child(mahasiswaId);
+
+                            dbMahasiswa.removeValue();
+
+                            Toast.makeText(UpdateActivity.this, "Deleting data...",
+                                    Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    }
+                }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
+
 }

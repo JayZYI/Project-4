@@ -15,11 +15,50 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Daftar Mahasiswa"
+            android:layout_marginRight="15dp"
+            android:text="Daftar Category"
             android:textStyle="bold"/>
 
         <Button
             android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Daftar Novel"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnnovel_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Daftar Chapter"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnchapter_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tambah" />
