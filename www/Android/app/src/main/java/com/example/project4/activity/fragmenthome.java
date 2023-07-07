@@ -112,7 +112,7 @@ public class fragmenthome extends Fragment implements CategoryAdapter.OnItemClic
         genreFragment.setArguments(bundle);
 
         // Navigate to the GenreFragment
-        FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, genreFragment);
         transaction.addToBackStack(null);
         transaction.commit();
