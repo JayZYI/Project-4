@@ -41,7 +41,7 @@ public class CreateNovelActivity extends AppCompatActivity implements View.OnCli
         edtReadTimes = findViewById(R.id.edt_readtimes);
         edtTag = findViewById(R.id.edt_tag);
         edtViews = findViewById(R.id.edt_views);
-        btnSave = findViewById(R.id.btn_save);
+        btnSave = findViewById(R.id.btn_save_novel);
 
         btnSave.setOnClickListener(this);
 
@@ -51,7 +51,7 @@ public class CreateNovelActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View view) {
 
-        if (view.getId() == R.id.btn_save) {
+        if (view.getId() == R.id.btn_save_novel) {
             saveNovel();
         }
 
@@ -66,39 +66,39 @@ public class CreateNovelActivity extends AppCompatActivity implements View.OnCli
             String tag = edtTag.getText().toString().trim();
             String views = edtViews.getText().toString().trim();
 
-            boolean isEmptyFields = false;
-
-            if (TextUtils.isEmpty(title)) {
-                isEmptyFields = true;
-                edtTitle.setError("Field ini tidak boleh kosong");
-            }
-
-            if (TextUtils.isEmpty(chapters)) {
-                isEmptyFields = true;
-                edtChapters.setError("Field ini tidak boleh kosong");
-            }
-
-            if (TextUtils.isEmpty(novelCover)) {
-                isEmptyFields = true;
-                edtNovelCover.setError("Field ini tidak boleh kosong");
-            }
-
-            if (TextUtils.isEmpty(readTimes)) {
-                isEmptyFields = true;
-                edtReadTimes.setError("Field ini tidak boleh kosong");
-            }
-
-            if (TextUtils.isEmpty(tag)) {
-                isEmptyFields = true;
-                edtTag.setError("Field ini tidak boleh kosong");
-            }
-
-            if (TextUtils.isEmpty(views)) {
-                isEmptyFields = true;
-                edtViews.setError("Field ini tidak boleh kosong");
-            }
-
-            if (!isEmptyFields) {
+//            boolean isEmptyFields = false;
+//
+//            if (TextUtils.isEmpty(title)) {
+//                isEmptyFields = true;
+//                edtTitle.setError("Field ini tidak boleh kosong");
+//            }
+//
+//            if (TextUtils.isEmpty(chapters)) {
+//                isEmptyFields = true;
+//                edtChapters.setError("Field ini tidak boleh kosong");
+//            }
+//
+//            if (TextUtils.isEmpty(novelCover)) {
+//                isEmptyFields = true;
+//                edtNovelCover.setError("Field ini tidak boleh kosong");
+//            }
+//
+//            if (TextUtils.isEmpty(readTimes)) {
+//                isEmptyFields = true;
+//                edtReadTimes.setError("Field ini tidak boleh kosong");
+//            }
+//
+//            if (TextUtils.isEmpty(tag)) {
+//                isEmptyFields = true;
+//                edtTag.setError("Field ini tidak boleh kosong");
+//            }
+//
+//            if (TextUtils.isEmpty(views)) {
+//                isEmptyFields = true;
+//                edtViews.setError("Field ini tidak boleh kosong");
+//            }
+//
+//            if (!isEmptyFields) {
                 Toast.makeText(CreateNovelActivity.this, "Saving Data...", Toast.LENGTH_SHORT).show();
 
                 DatabaseReference dbNovel = mDatabase.child("novel");
@@ -116,7 +116,7 @@ public class CreateNovelActivity extends AppCompatActivity implements View.OnCli
                 dbNovel.child(id).setValue(novel);
 
                 finish();
-            }
+//            }
         } catch (Exception e) {
             e.printStackTrace(); // Print the exception stack trace for debugging
         }

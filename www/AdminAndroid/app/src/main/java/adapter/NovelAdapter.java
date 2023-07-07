@@ -60,16 +60,25 @@ public class NovelAdapter extends BaseAdapter {
     }
 
     private class ViewHolder {
-        private TextView txtTitle, txtTag;
+        private TextView txtTitle, txtChapters, txtTag, txtNovelCover, txtReadTimes, txtViews;
 
         ViewHolder(View view) {
-            txtTitle = view.findViewById(R.id.txt_title);
-            txtTag = view.findViewById(R.id.txt_tag);
+            txtTitle = view.findViewById(R.id.edt_title);
+            txtChapters = view.findViewById(R.id.edt_chapters);
+            txtNovelCover = view.findViewById(R.id.edt_cover);
+            txtReadTimes = view.findViewById(R.id.edt_readtimes);
+            txtTag = view.findViewById(R.id.edt_tag);
+            txtViews = view.findViewById(R.id.edt_views);
+
         }
 
         void bind(Novel novel) {
             txtTitle.setText(novel.getTitle());
+            txtChapters.setText(novel.getChapters());
+            txtNovelCover.setText(novel.getNovelCover());
+            txtReadTimes.setText(novel.getReadTimes());
             txtTag.setText(novel.getTag());
+            txtViews.setText(novel.getViews());
         }
     }
 
