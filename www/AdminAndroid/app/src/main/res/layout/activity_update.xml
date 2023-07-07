@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="16dp"
-    tools:context="mahasiswa.CreateActivity">
+    tools:context=".UpdateActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add New Record"
+        android:text="Edit Record"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -19,27 +19,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="NIM"/>
-
+        android:text="NIM"
+        />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edt_nim"/>
+        android:id="@+id/edt_edit_nim"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama"/>
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edt_nama"/>
+        android:id="@+id/edt_edit_nama"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_save"
-        android:text="Save" />
+        android:id="@+id/btn_update"
+        android:text="Update" />
 
 </LinearLayout>

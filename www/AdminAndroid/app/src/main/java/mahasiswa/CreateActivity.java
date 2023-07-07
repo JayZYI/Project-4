@@ -51,6 +51,7 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
 
     private void saveMahasiswa()
     {
+        try {
         String nama = edtNama.getText().toString().trim();
         String nim = edtNim.getText().toString().trim();
 
@@ -83,6 +84,16 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
 
             finish();
 
+
+
+
+
+        }
+        } catch (Exception e) {
+//            Toast.makeText(CreateActivity.this, e.printStackTrace(), Toast.LENGTH_SHORT).show();
+
+            e.printStackTrace(); // Print the exception stack trace for debugging
         }
     }
+
 }
