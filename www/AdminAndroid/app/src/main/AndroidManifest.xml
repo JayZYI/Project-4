@@ -13,6 +13,27 @@
         android:theme="@style/Theme.AdminAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.TagUpdateActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.NovelUpdateActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ChapterUpdateActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity.ChapterCreateActivity"
             android:exported="false">
             <meta-data
@@ -68,8 +89,7 @@
                 android:value="" />
         </activity>
 
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>
