@@ -2,12 +2,12 @@ package com.example.adminandroid.Model;
 
 public class novel {
     private String novelId;
-    private int chapters;
+    private String chapters;
     private String novelCover;
-    private int readTimes;
+    private String readTimes;
     private String tag;
     private String title;
-    private int views;
+    private String views;
 
     // Constructor
     public novel() {
@@ -22,11 +22,11 @@ public class novel {
         this.novelId = novelId;
     }
 
-    public int getChapters() {
+    public String getChapters() {
         return chapters;
     }
 
-    public void setChapters(int chapters) {
+    public void setChapters(String chapters) {
         this.chapters = chapters;
     }
 
@@ -38,11 +38,11 @@ public class novel {
         this.novelCover = novelCover;
     }
 
-    public int getReadTimes() {
+    public String getReadTimes() {
         return readTimes;
     }
 
-    public void setReadTimes(int readTimes) {
+    public void setReadTimes(String readTimes) {
         this.readTimes = readTimes;
     }
 
@@ -62,11 +62,11 @@ public class novel {
         this.title = title;
     }
 
-    public int getViews() {
+    public String getViews() {
         return views;
     }
 
-    public void setViews(int views) {
+    public void setViews(String views) {
         this.views = views;
     }
 }

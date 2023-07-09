@@ -14,7 +14,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_baseline_delete_24" />
+            android:src="@drawable/ic_baseline_delete_24"
+            android:paddingVertical="12dp"
+            android:background="@color/red"
+            android:paddingHorizontal="4dp"/>
 
         <ImageButton
             android:id="@+id/btnEdit"
@@ -22,7 +25,12 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/btnDelete"
             android:layout_toStartOf="@id/btnDelete"
-            android:src="@drawable/ic_baseline_edit_24" />
+            android:src="@drawable/ic_baseline_edit_24"
+            android:paddingVertical="12dp"
+            android:background="@color/purple_500"
+            android:layout_marginHorizontal="5dp"
+            android:paddingHorizontal="4dp"/>
+
 
         <TextView
             android:id="@+id/txtview"
