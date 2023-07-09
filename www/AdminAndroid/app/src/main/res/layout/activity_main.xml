@@ -1,72 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/bg"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:text="Daftar Category"
-            android:textStyle="bold"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="343dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:text="Novels"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btn_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tambah" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="343dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Tags"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:text="Daftar Novel"
-            android:textStyle="bold"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="343dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Chapters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-        <Button
-            android:id="@+id/btnnovel_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tambah" />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="343dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="LogOut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:text="Daftar Chapter"
-            android:textStyle="bold"/>
-
-        <Button
-            android:id="@+id/btnchapter_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tambah" />
-
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/lv_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
