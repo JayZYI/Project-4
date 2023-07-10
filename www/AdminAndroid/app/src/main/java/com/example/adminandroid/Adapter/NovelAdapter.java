@@ -2,6 +2,7 @@ package com.example.adminandroid.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.adminandroid.Activity.ChapterUpdateActivity;
 import com.example.adminandroid.Activity.NovelActivity;
 import com.example.adminandroid.Activity.NovelUpdateActivity;
 import com.example.adminandroid.Model.novel;
@@ -77,7 +79,7 @@ public class NovelAdapter extends RecyclerView.Adapter<NovelAdapter.ViewHolder> 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editNovel(novel);
+                editNovel(novel, holder.itemView.getContext());
             }
         });
     }
@@ -109,12 +111,51 @@ public class NovelAdapter extends RecyclerView.Adapter<NovelAdapter.ViewHolder> 
     }
 
 
+    private void editNovel(novel novel, Context context) {
+        String title = novel.getTitle();
+        String tag = novel.getTag();
+        String novelCover = novel.getNovelCover();
+        String views = novel.getViews();
+        String chapters = novel.getChapters();
+        String readTimes = novel.getReadTimes();
 
-    private void editNovel(novel novel) {
-        Intent intent = new Intent(novelActivity, NovelUpdateActivity.class);
-        intent.putExtra("novelId", novel.getNovelId());
-        intent.putExtra("tag", novel.getTag());
-        intent.putExtra("title", novel.getTitle());
-        novelActivity.startActivity(intent);
+        Log.d("NovelAdapter", "Title: " + title);
+        Log.d("NovelAdapter", "Tag: " + tag);
+        Log.d("NovelAdapter", "Novel Cover: " + novelCover);
+        Log.d("NovelAdapter", "Views: " + views);
+        Log.d("NovelAdapter", "Chapters: " + chapters);
+        Log.d("NovelAdapter", "Read Times: " + readTimes);
+
+        databaseRef.orderByChild("title").equalTo(title)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            // Get the first child (assuming there's only one matching chapter)
+                            DataSnapshot snapshot = dataSnapshot.getChildren().iterator().next();
+                            String novelId = snapshot.getKey();
+
+                            // Create an Intent to start the ChapterUpdateActivity and pass the chapter details
+                            Intent intent = new Intent(context, NovelUpdateActivity.class);
+                            intent.putExtra("novelId", novelId); // Pass the chapter ID as an extra
+                            intent.putExtra("title", title);
+                            intent.putExtra("tag", tag);
+                            intent.putExtra("novelCover", novelCover);
+                            intent.putExtra("views", views);
+                            intent.putExtra("chapters", chapters);
+                            intent.putExtra("readTimes", readTimes);
+                            context.startActivity(intent);
+                        } else {
+                            // Handle the case when the chapter doesn't exist
+                            Toast.makeText(context, "Chapter not found", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Toast.makeText(context, "Failed to retrieve chapter", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }
