@@ -432,7 +432,7 @@
   databaseCRef.once('value', function(snapshot) {
     var select = document.getElementById("t_create");
     snapshot.forEach(function(childSnapshot) {
-      var brandName = childSnapshot.child("CatName").val();
+      var brandName = childSnapshot.child("catName").val();
       var option = document.createElement("option");
       option.value = brandName;
       option.text = brandName;
@@ -451,7 +451,7 @@
 databaseCRef.once('value', function(snapshot) {
   var select = document.getElementById("c_create");
   snapshot.forEach(function(childSnapshot) {
-    var brandName = childSnapshot.child("CatName").val();
+    var brandName = childSnapshot.child("catName").val();
     var option = document.createElement("option");
     option.value = brandName;
     option.text = brandName;
@@ -490,7 +490,7 @@ databaseCRef.once('value', function(snapshot) {
   databaseCRef.once('value', function(snapshot) {
     var select = document.getElementById("c_update");
     snapshot.forEach(function(childSnapshot) {
-      var brandName = childSnapshot.child("CatName").val();
+      var brandName = childSnapshot.child("catName").val();
       var option = document.createElement("option");
       option.value = brandName;
       option.text = brandName;

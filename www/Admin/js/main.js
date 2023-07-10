@@ -56,7 +56,7 @@ function create() {
     var imageFile = document.getElementById('imageFile').files[0];
   
     // Create a storage reference to store the image file
-    var storageRef = firebase.storage().ref().child('novelCovers/' + imageFile.name);
+    var storageRef = firebase.storage().ref().child('novel_covers/' + imageFile.name);
   
     // Upload the image file to Firebase Storage
     storageRef.put(imageFile)
@@ -106,7 +106,7 @@ function create() {
         var model = document.getElementById('tm_create').value;
         var uid = firebase.database().ref().child('Category').push().key;
         var data = {
-            CatName: model
+            catName: model
             }
         var updates = {};
         updates['/Category/' + uid] = data;
