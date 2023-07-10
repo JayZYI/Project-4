@@ -18,7 +18,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.adminandroid.Model.novel;
 import com.example.adminandroid.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -45,6 +44,7 @@ public class NovelUpdateActivity extends AppCompatActivity {
     private StorageReference storageRef;
     private Uri selectedImageUri;
     private TextView textViewImageName; // TextView to display the image name
+    private TextView textViewChapters; // TextView to display the chapter count
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +55,7 @@ public class NovelUpdateActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String novelId = intent.getStringExtra("novelId");
         String title = intent.getStringExtra("title");
-        String tag = intent.getStringExtra("tag");
         String novelCover = intent.getStringExtra("novelCover");
-        String views = intent.getStringExtra("views");
-        String chapters = intent.getStringExtra("chapters");
-        String readTimes = intent.getStringExtra("readTimes");
 
         // Set the retrieved values in the respective fields
         editTextTitle = findViewById(R.id.editTextTextPersonName);
@@ -67,20 +63,13 @@ public class NovelUpdateActivity extends AppCompatActivity {
         buttonOpenGallery = findViewById(R.id.btnOpenGallery);
         buttonSubmit = findViewById(R.id.button5);
         spinnerCategory = findViewById(R.id.spinner);
-        textViewImageName = findViewById(R.id.textViewImageName); // Initialize the TextView
+        textViewImageName = findViewById(R.id.textViewImageName);
+        textViewChapters = findViewById(R.id.txtchapters);
 
         databaseRef = FirebaseDatabase.getInstance().getReference("novel");
         storageRef = FirebaseStorage.getInstance().getReference().child("novel_covers");
 
         populateSpinner();
-
-        // Set the retrieved values in the respective fields
-//        int categoryIndex = getCategoryIndex(tag);
-
-        // Set the selected category in the spinner
-//        if (categoryIndex != -1) {
-//            spinnerCategory.setSelection(categoryIndex);
-//        }
 
         // Display the previous image name
         textViewImageName.setText(getFileName(Uri.parse(novelCover)));
@@ -172,6 +161,25 @@ public class NovelUpdateActivity extends AppCompatActivity {
                                 novelRef.child("tag").setValue(category);
                                 novelRef.child("novelCover").setValue(downloadUri.toString());
 
+                                // Increment the chapters count
+                                DatabaseReference chaptersRef = novelRef.child("chapters");
+                                chaptersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        Integer existingChapters = dataSnapshot.getValue(Integer.class);
+                                        int updatedChapters = existingChapters != null ? existingChapters + 1 : 1;
+                                        chaptersRef.setValue(updatedChapters);
+
+                                        // Update the chapter count TextView
+                                        textViewChapters.setText(String.valueOf(updatedChapters));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        // Handle database error
+                                    }
+                                });
+
                                 Toast.makeText(NovelUpdateActivity.this, "Novel updated successfully", Toast.LENGTH_SHORT).show();
                                 finish();
                             }
@@ -186,7 +194,6 @@ public class NovelUpdateActivity extends AppCompatActivity {
                 });
     }
 
-
     private String getFileName(Uri uri) {
         String fileName = null;
         Cursor cursor = getContentResolver().query(uri, null, null, null, null);
@@ -199,15 +206,4 @@ public class NovelUpdateActivity extends AppCompatActivity {
         }
         return fileName;
     }
-
-    private int getCategoryIndex(String tag) {
-        ArrayAdapter<String> adapter = (ArrayAdapter<String>) spinnerCategory.getAdapter();
-        for (int i = 0; i < adapter.getCount(); i++) {
-            if (adapter.getItem(i).equals(tag)) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
 }

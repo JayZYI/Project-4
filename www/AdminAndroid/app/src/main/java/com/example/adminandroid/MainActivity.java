@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.adminandroid.Activity.ChapterActivity;
+import com.example.adminandroid.Activity.LoginActivity;
 import com.example.adminandroid.Activity.NovelActivity;
 import com.example.adminandroid.Activity.TagActivity;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button button1 = findViewById(R.id.button);
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
+        Button buttonLogin = findViewById(R.id.button4);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,5 +48,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start LoginActivity
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
