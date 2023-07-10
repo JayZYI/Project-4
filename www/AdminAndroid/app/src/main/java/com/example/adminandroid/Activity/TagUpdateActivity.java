@@ -14,7 +14,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class TagUpdateActivity extends AppCompatActivity {
-    private EditText editTextCatName;
+    private EditText editTextcatName;
     private Button buttonUpdate;
     private DatabaseReference databaseRef;
     private String categoryId;
@@ -31,11 +31,11 @@ public class TagUpdateActivity extends AppCompatActivity {
             String catName = extras.getString("catName");
 
             // Initialize UI elements
-            editTextCatName = findViewById(R.id.update_name);
+            editTextcatName = findViewById(R.id.update_name);
             buttonUpdate = findViewById(R.id.btn_update);
 
             // Set the initial value for the catName EditText
-            editTextCatName.setText(catName);
+            editTextcatName.setText(catName);
         }
 
         // Initialize the database reference
@@ -51,13 +51,13 @@ public class TagUpdateActivity extends AppCompatActivity {
     }
 
     private void updateTag() {
-        String updatedCatName = editTextCatName.getText().toString().trim();
+        String updatedcatName = editTextcatName.getText().toString().trim();
 
         // Perform validation if needed
 
         // Update the tag in the database
         if (categoryId != null) {
-            databaseRef.child(categoryId).child("CatName").setValue(updatedCatName);
+            databaseRef.child(categoryId).child("catName").setValue(updatedcatName);
             Toast.makeText(TagUpdateActivity.this, "Tag updated successfully", Toast.LENGTH_SHORT).show();
             finish();
         } else {

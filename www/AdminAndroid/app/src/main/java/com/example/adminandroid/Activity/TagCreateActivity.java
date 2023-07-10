@@ -39,9 +39,9 @@ public class TagCreateActivity extends AppCompatActivity {
     }
 
     private void createTag() {
-        String tagName = editTextTagName.getText().toString().trim();
+        String TagName = editTextTagName.getText().toString().trim();
 
-        if (tagName.isEmpty()) {
+        if (TagName.isEmpty()) {
             Toast.makeText(this, "Please enter a tag name", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -52,7 +52,7 @@ public class TagCreateActivity extends AppCompatActivity {
         // Create a new tag object
         tag newTag = new tag();
         newTag.setCategoryId(tagId);
-        newTag.setCatName(tagName);
+        newTag.setcatName(TagName);
 
         // Save the new tag to the database
         databaseRef.child(tagId).setValue(newTag);

@@ -27,10 +27,12 @@ public class NovelActivity extends AppCompatActivity {
     private List<novel> novelList;
     private DatabaseReference databaseRef;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novel);
+
 
         FloatingActionButton button = findViewById(R.id.floatingActionButton);
         recyclerView = findViewById(R.id.recyclerView);

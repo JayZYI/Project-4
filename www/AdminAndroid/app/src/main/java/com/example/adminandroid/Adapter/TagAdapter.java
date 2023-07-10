@@ -54,7 +54,7 @@ public class TagAdapter extends RecyclerView.Adapter<TagAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         tag tag = tagList.get(position);
-        holder.textView.setText(tag.getCatName());
+        holder.textView.setText(tag.getcatName());
 
         // Delete button click listener
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +92,7 @@ public class TagAdapter extends RecyclerView.Adapter<TagAdapter.ViewHolder> {
     private void editTag(tag tag) {
         Intent intent = new Intent(tagActivity, TagUpdateActivity.class);
         intent.putExtra("categoryId", tag.getCategoryId());
-        intent.putExtra("catName", tag.getCatName());
+        intent.putExtra("catName", tag.getcatName());
         tagActivity.startActivity(intent);
     }
 }

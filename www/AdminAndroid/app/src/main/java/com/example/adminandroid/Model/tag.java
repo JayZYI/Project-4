@@ -1,8 +1,12 @@
 package com.example.adminandroid.Model;
 
+import com.google.firebase.database.PropertyName;
+
 public class tag {
     private String categoryId;
-    private String CatName;
+
+    @PropertyName("catName")
+    private String catName;
 
     // Constructor
     public tag() {
@@ -17,11 +21,11 @@ public class tag {
         this.categoryId = categoryId;
     }
 
-    public String getCatName() {
-        return CatName;
+    public String getcatName() {
+        return catName;
     }
 
-    public void setCatName(String CatName) {
-        this.CatName = CatName;
+    public void setcatName(String catName) {
+        this.catName = catName;
     }
 }
