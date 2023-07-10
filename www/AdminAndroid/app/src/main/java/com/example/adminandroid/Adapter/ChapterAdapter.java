@@ -2,11 +2,13 @@ package com.example.adminandroid.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,16 +16,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.adminandroid.Activity.ChapterUpdateActivity;
 import com.example.adminandroid.Model.chapter;
 import com.example.adminandroid.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
 public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ViewHolder> {
     private List<chapter> chapterList;
+    private DatabaseReference databaseRef;
 
     public ChapterAdapter(List<chapter> chapterList) {
         this.chapterList = chapterList;
+        databaseRef = FirebaseDatabase.getInstance().getReference("chap");
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -58,7 +67,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ViewHold
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                deleteChapter(position);
+                deleteChapter(chap, holder.itemView.getContext());
             }
         });
 
@@ -66,7 +75,11 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ViewHold
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editChapter(chap);
+                editChapter(chap, holder.itemView.getContext());
+                Log.d("ChapterAdapter", "Retrieved Chapter Data:");
+                Log.d("ChapterAdapter", "Chapter Title: " + chap.getChapTitle());
+                Log.d("ChapterAdapter", "Content: " + chap.getContent());
+                Log.d("ChapterAdapter", "Novel: " + chap.getNovel());
             }
         });
     }
@@ -76,19 +89,64 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ViewHold
         return chapterList.size();
     }
 
-    private void deleteChapter(int position) {
-        chapter chap = chapterList.get(position);
-        String chapId = chap.getChapId();
+    private void deleteChapter(chapter chap, Context context) {
+        String chapterTitle = chap.getChapTitle();
 
-        // Delete the chapter from the database
-        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("chap");
-        databaseRef.child(chapId).removeValue();
+        // Find the chapter with the matching title and delete it from the database
+        databaseRef.orderByChild("chapTitle").equalTo(chapterTitle)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            snapshot.getRef().removeValue();
+                        }
 
-        chapterList.remove(position);
-        notifyItemRemoved(position);
+                        chapterList.remove(chap);
+                        notifyDataSetChanged();
+                        Toast.makeText(context, "Chapter deleted successfully", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Toast.makeText(context, "Failed to delete chapter", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
-    private void editChapter(chapter chap) {
+    private void editChapter(chapter chap, Context context) {
+        // Get the chapter details
+        String chapterTitle = chap.getChapTitle();
+        String content = chap.getContent();
+        String novel = chap.getNovel();
 
+        // Find the chapter with the matching title and retrieve its ID
+        databaseRef.orderByChild("chapTitle").equalTo(chapterTitle)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        // Check if the chapter exists
+                        if (dataSnapshot.exists()) {
+                            // Get the first child (assuming there's only one matching chapter)
+                            DataSnapshot snapshot = dataSnapshot.getChildren().iterator().next();
+                            String chapterId = snapshot.getKey();
+
+                            // Create an Intent to start the ChapterUpdateActivity and pass the chapter details
+                            Intent intent = new Intent(context, ChapterUpdateActivity.class);
+                            intent.putExtra("chapterId", chapterId); // Pass the chapter ID as an extra
+                            intent.putExtra("chapterTitle", chapterTitle);
+                            intent.putExtra("content", content);
+                            intent.putExtra("novel", novel);
+                            context.startActivity(intent);
+                        } else {
+                            // Handle the case when the chapter doesn't exist
+                            Toast.makeText(context, "Chapter not found", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Toast.makeText(context, "Failed to retrieve chapter", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }
