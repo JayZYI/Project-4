@@ -35,7 +35,7 @@
           <!-- genre offcanvas -->
           <ul class="navbar-nav me-1 mb-2 mb-lg-0 d-none d-md-flex">
                 <a class="nav-link " data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" href="#">
-                  Shoe Store
+                  Novel App
                 </a>
           </ul>
       
@@ -72,8 +72,8 @@
     <table class="table table-striped shadow-lg icons" id="tbl" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <thead>
             <tr>
-              <th>Shoes IDs</th>
-              <th>Brand</th>
+              <th>Novel ID</th>
+              <th>Title</th>
               <th>Model</th>
               <th>Category</th>
               <th>Size</th>
